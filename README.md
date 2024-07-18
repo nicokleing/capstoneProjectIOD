@@ -101,29 +101,4 @@ The application allows users to register, log in, search for products and servic
 - `npm run build`: Builds the application for production.
 - `npm run preview`: Previews the built application.
 
-## Socket.IO Configuration
 
-The Socket.IO server is configured in `backend/server.js`:
-
-```javascript
-const { createServer } = require('http');
-const { Server } = require('socket.io');
-
-const httpServer = createServer(app);
-const io = new Server(httpServer, {
-  cors: {
-    origin: '*',
-  }
-});
-
-io.on('connection', (socket) => {
-  console.log('New client connected');
-
-  socket.on('sendMessage', (message) => {
-    io.emit('receiveMessage', message);
-  });
-
-  socket.on('disconnect', () => {
-    console.log('Client disconnected');
-  });
-});
