@@ -10,7 +10,7 @@ The application allows users to register, log in, search for products and servic
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/nicokleing/capstoneProjectIODPrivate.git
+    git clone https://github.com/nicokleing/capstoneProjectIOD.git
     ```
 2. Navigate to the project folder:
     ```sh
