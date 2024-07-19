@@ -11,7 +11,7 @@ const openaiClient = axios.create({
 export const getResponseFromOpenAI = async (prompt, messages = []) => {
   try {
     const response = await openaiClient.post("/chat/completions", {
-      model: "ft:gpt-3.5-turbo-0125:personal::9lYa9cZI",
+      model: "",
       messages: [
         ...messages,
         { role: "user", content: prompt },
